@@ -1,27 +1,16 @@
-# Dashboard Blueprint
+# Retail Dashboard Blueprint
 
-## Executive Overview
+## Executive Page
 
-- Total units sold
-- Forecasted units
+- Total revenue
+- Actual units sold
+- Forecast units
 - Mean absolute forecast error
 - Stockout-risk product count
 
-## Demand Trend
+## Planning Page
 
-- Actual versus forecasted units by date
-- Product and category filters
-- Store-level demand comparison
-
-## Inventory Action Queue
-
-- Product ID
-- Store ID
-- Forecast delta
-- Recommended replenishment action
-
-## Forecast Monitoring
-
-- Forecast error by product
-- Forecast error by store
-- Promotion impact on demand
+- Store and product filters
+- Actual versus forecast trend
+- Replenishment priority table
+- Promotion and SNAP demand impact
