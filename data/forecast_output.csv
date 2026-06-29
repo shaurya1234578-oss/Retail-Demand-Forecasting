@@ -1,0 +1,15 @@
+date,store_id,product_id,category,units_sold,forecast_units,forecast_delta,inventory_action
+2026-05-01,S001,P100,Electronics,22,40,18,Increase replenishment
+2026-05-02,S001,P100,Electronics,25,26,1,Monitor current stock
+2026-05-03,S001,P100,Electronics,24,25,1,Monitor current stock
+2026-05-04,S001,P100,Electronics,29,28,-1,Monitor current stock
+2026-05-05,S001,P100,Electronics,27,28,1,Monitor current stock
+2026-05-06,S001,P100,Electronics,31,29,-2,Monitor current stock
+2026-05-07,S001,P100,Electronics,33,31,-2,Monitor current stock
+2026-05-01,S002,P200,Grocery,80,81,1,Monitor current stock
+2026-05-02,S002,P200,Grocery,83,84,1,Monitor current stock
+2026-05-03,S002,P200,Grocery,88,88,0,Monitor current stock
+2026-05-04,S002,P200,Grocery,92,91,-1,Monitor current stock
+2026-05-05,S002,P200,Grocery,86,89,3,Increase replenishment
+2026-05-06,S002,P200,Grocery,91,89,-2,Monitor current stock
+2026-05-07,S002,P200,Grocery,96,92,-4,Monitor current stock

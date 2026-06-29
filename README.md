@@ -1,256 +1,120 @@
-# AI Retail Demand Forecasting & Inventory Analytics
+# AI Retail Demand Forecasting and Inventory Analytics
 
-## Project Overview
+An end-to-end retail analytics portfolio project for demand forecasting, inventory planning, and business intelligence reporting.
 
-Retail businesses often struggle with inaccurate demand predictions, leading to stock shortages, excess inventory, increased operational costs, and lost sales opportunities.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![Forecasting](https://img.shields.io/badge/Forecasting-Retail%20Demand-success?style=flat-square)
 
-This project develops an end-to-end Retail Demand Forecasting system using Machine Learning and Time Series Forecasting techniques to predict future product demand based on historical sales data. The solution helps businesses make informed inventory planning decisions and improve overall supply chain efficiency.
+## Executive Summary
 
-The project utilizes the M5 Forecasting Dataset and incorporates data preprocessing, exploratory data analysis, feature engineering, forecasting models, SQL-based data storage, and interactive business intelligence dashboards.
+Retail teams lose revenue when demand forecasts are inaccurate. Under-forecasting creates stockouts and missed sales, while over-forecasting increases inventory holding cost and markdown risk.
 
----
+This project demonstrates a structured forecasting workflow that transforms sales history into demand features, baseline predictions, inventory recommendations, and dashboard-ready reporting tables.
 
 ## Business Problem
 
-Retailers need accurate demand forecasts to:
+The goal is to support inventory planners with answers to practical questions:
 
-- Reduce stockouts
-- Minimize excess inventory
-- Improve inventory turnover
-- Optimize purchasing decisions
-- Increase revenue and profitability
-
-Traditional forecasting approaches often fail to capture seasonality, trends, and changing customer purchasing patterns.
-
-This project addresses these challenges by leveraging Machine Learning and Time Series Forecasting models to generate accurate demand predictions.
-
----
-
-## Project Objectives
-
-- Forecast future product demand using historical sales data
-- Analyze sales trends and seasonality
-- Build and compare multiple forecasting models
-- Store and manage processed data using MySQL
-- Visualize insights through Power BI dashboards
-- Generate actionable inventory planning insights
-
----
-
-## Tech Stack
-
-### Programming & Data Analysis
-- Python
-- Pandas
-- NumPy
-
-### Data Visualization
-- Matplotlib
-- Seaborn
-- Power BI
-
-### Machine Learning & Forecasting
-- XGBoost
-- Prophet
-- Scikit-Learn
-
-### Database
-- MySQL
-
-### Development Environment
-- Google Colab
-
----
-
-## Dataset
-
-### M5 Forecasting Accuracy Dataset
-
-The dataset contains:
-
-- Historical product sales
-- Store information
-- Product hierarchy
-- Calendar events
-- Selling prices
-
-The dataset is widely used for retail forecasting and demand prediction tasks.
-
----
-
-## Project Architecture
-
-Raw Data
-
-↓
-
-Data Cleaning & Preprocessing
-
-↓
-
-Exploratory Data Analysis (EDA)
-
-↓
-
-Feature Engineering
-
-↓
-
-MySQL Data Storage
-
-↓
-
-Forecasting Models (XGBoost & Prophet)
-
-↓
-
-Model Evaluation
-
-↓
-
-Demand Forecast Generation
-
-↓
-
-Power BI Dashboard
-
-↓
-
-Business Insights & Inventory Planning
-
----
-
-## Project Workflow
-
-### 1. Data Collection
-- Import M5 Forecasting Dataset
-- Load sales, calendar, and pricing data
-
-### 2. Data Cleaning
-- Handle missing values
-- Remove duplicates
-- Correct data types
-- Merge relevant datasets
-
-### 3. Exploratory Data Analysis (EDA)
-- Sales trend analysis
-- Product performance analysis
-- Seasonality analysis
-- Store-wise sales comparison
-
-### 4. Feature Engineering
-Generate forecasting features such as:
-
-- Day
-- Week
-- Month
-- Quarter
-- Year
-- Day of Week
-- Lag Features
-- Rolling Mean Features
-- Seasonal Indicators
-
-### 5. Model Development
-
-#### XGBoost
-Machine learning model used for demand prediction based on engineered features.
-
-#### Prophet
-Time-series forecasting model used to capture trend and seasonality patterns.
-
-### 6. Model Evaluation
-
-Evaluation Metrics:
-
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-- R² Score
-
-### 7. Dashboard Development
-
-Power BI dashboard includes:
-
-- Sales Performance
-- Forecast Trends
-- Product Analysis
-- Inventory Insights
-- Business KPIs
-
----
+- Which products are likely to face demand spikes?
+- Which stores or categories need replenishment attention?
+- Where is inventory risk caused by overstock or stockout patterns?
+- How can forecasting output be translated into BI dashboards for business teams?
 
 ## Key Features
 
-- Retail Demand Forecasting
-- Sales Trend Analysis
-- Seasonal Pattern Detection
-- Machine Learning Forecasting
-- Time Series Forecasting
-- Data Storage with MySQL
-- Interactive Power BI Dashboard
-- Inventory Planning Support
+- Feature engineering for date, lag, rolling average, and store-product demand signals.
+- Baseline forecasting workflow using Python and scikit-learn.
+- SQL schema and analytical queries for BI reporting.
+- Dashboard blueprint for Power BI or Tableau.
+- Actionable inventory recommendations based on forecast movement.
 
----
+## Architecture Pipeline
 
-## Expected Outcomes
+```text
+Raw retail sales
+    -> Data cleaning and validation
+    -> Feature engineering
+    -> Forecast model training
+    -> Forecast and inventory recommendation output
+    -> SQL reporting views
+    -> BI dashboard and planning actions
+```
 
-- Improved demand forecasting accuracy
-- Reduced inventory holding costs
-- Better stock management
-- Improved purchasing decisions
-- Enhanced business visibility through dashboards
-
----
-
-## Project Folder Structure
+## Repository Structure
 
 ```text
 Retail-Demand-Forecasting/
-│
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│
-├── notebooks/
-│   ├── eda.ipynb
-│   ├── feature_engineering.ipynb
-│   ├── model_training.ipynb
-│
-├── sql/
-│   ├── schema.sql
-│   ├── queries.sql
-│
-├── models/
-│   ├── xgboost_model.pkl
-│   ├── prophet_model.pkl
-│
+│   └── sample_sales.csv
 ├── dashboard/
-│   ├── powerbi_dashboard.pbix
-│
-├── reports/
-│   ├── project_report.pdf
-│
+│   └── dashboard_blueprint.md
+├── docs/
+│   └── inventory_insights.md
+├── models/
+│   └── .gitkeep
+├── notebooks/
+│   └── .gitkeep
+├── sql/
+│   └── retail_forecasting.sql
+├── src/
+│   └── demand_forecasting.py
+├── .gitignore
+├── LICENSE
 ├── README.md
-│
 └── requirements.txt
 ```
 
----
+## Actionable Insights Demonstrated
+
+- Products with rising rolling demand and high forecast variance should be reviewed before purchase orders are finalized.
+- Store-category combinations with repeated under-forecasting need safety-stock adjustments.
+- Slow-moving products should be flagged for markdown or inventory redistribution.
+- Forecast dashboards should show demand trend, forecast error, stockout risk, and replenishment priority together.
+
+## How To Run
+
+1. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the forecasting workflow:
+
+```bash
+python src/demand_forecasting.py
+```
+
+3. Review the generated output:
+
+```text
+data/forecast_output.csv
+```
+
+4. Use `sql/retail_forecasting.sql` to create reporting tables and dashboard views.
+
+## Dashboard Pages
+
+- Executive Overview: sales, forecasted demand, forecast error, stockout risk.
+- Product Performance: category, product, and store-level trends.
+- Inventory Planning: replenishment priority and suggested business action.
+- Forecast Monitoring: actual versus predicted demand.
 
 ## Future Enhancements
 
-- Real-time demand forecasting
-- Automated model retraining
-- Inventory optimization recommendations
-- Multi-store forecasting
-- Forecast API deployment
-- Cloud deployment and monitoring
+- Add full M5 Forecasting dataset workflow.
+- Compare multiple models such as XGBoost, Prophet, and Random Forest.
+- Add model tracking and scheduled retraining.
+- Publish a Power BI dashboard screenshot and downloadable template.
+- Deploy a forecasting API for real-time planning.
 
----
+## Suggested GitHub Topics
+
+`retail-analytics`, `demand-forecasting`, `inventory-optimization`, `machine-learning`, `time-series`, `business-intelligence`, `powerbi-dashboard`, `sql`, `python`, `pandas`, `scikit-learn`, `portfolio-project`
 
 ## Author
 
-**Shaurya Rajput**
-
-Data Analytics | Machine Learning | Retail Forecasting | Business Intelligence
-
+Shaurya Rajput  
+Data Analytics | Business Intelligence | Applied Machine Learning

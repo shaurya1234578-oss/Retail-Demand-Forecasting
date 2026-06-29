@@ -1,0 +1,15 @@
+date,store_id,product_id,category,units_sold,price,promotion_flag
+2026-05-01,S001,P100,Electronics,22,799,0
+2026-05-02,S001,P100,Electronics,25,799,1
+2026-05-03,S001,P100,Electronics,24,799,0
+2026-05-04,S001,P100,Electronics,29,779,1
+2026-05-05,S001,P100,Electronics,27,779,0
+2026-05-06,S001,P100,Electronics,31,779,1
+2026-05-07,S001,P100,Electronics,33,779,1
+2026-05-01,S002,P200,Grocery,80,99,0
+2026-05-02,S002,P200,Grocery,83,99,0
+2026-05-03,S002,P200,Grocery,88,95,1
+2026-05-04,S002,P200,Grocery,92,95,1
+2026-05-05,S002,P200,Grocery,86,99,0
+2026-05-06,S002,P200,Grocery,91,99,0
+2026-05-07,S002,P200,Grocery,96,95,1
